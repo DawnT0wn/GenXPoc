@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QFileDialog
 
 # 设计选择可执行文件路径
-def select_executable_path(window):
+def select_executable_nuclei_path(window):
     options = QFileDialog.Options()
     file_path, _ = QFileDialog.getOpenFileName(window, "选择可执行文件路径", "",
                                                "All Files (*);;Executable Files (*.exe)", options=options)

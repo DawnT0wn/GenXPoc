@@ -2,7 +2,7 @@
 import re
 
 
-def add_to_poc(window):
+def nuclei_add_to_poc(window):
     generated_poc = window.ui.textEdit_2.toPlainText()
 
     # 为了在 matchers-condition 前插入新的请求，匹配其索引，调整与yaml的缩进格式

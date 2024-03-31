@@ -3,8 +3,8 @@
 import re
 from PyQt5.QtWidgets import QMessageBox
 
-from Functions.GenerateNewPoc.Extractors import GetExtractors
-from Functions.GenerateNewPoc.Machers import GetMatchers
+from Functions.Nuclei.GenerateNucleiPoc.Extractors import GetExtractors
+from Functions.Nuclei.GenerateNucleiPoc.Machers import GetMatchers
 
 
 def generate_nuclei_poc(window):
