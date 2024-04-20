@@ -17,7 +17,7 @@ def execute_xray(window):
         QMessageBox.information(window, "Invaild URL", "Please input only one valid URL")
         return None
 
-    poc_path = get_nuclei_poc_path() + "/" + selected_poc
+    poc_path = get_xrry_poc_path() + "/" + selected_poc
 
     execute_path = window.ui.lineEdit_8.text()
 
@@ -26,8 +26,6 @@ def execute_xray(window):
         result_folder_path = os.path.join(current_dir, "Results")
         filename = result_folder_path + "/" + selected_poc.split(".")[0]
         output_file_type = window.ui.comboBox_5.currentText()
-        if output_file_type == "text":
-            command = [execute_path, "--log-level", "debug", "webscan", "--url", url, "-p", poc_path, "--text-output", f"{filename}.txt"]
         if output_file_type == "html":
             command = [execute_path, "--log-level", "debug", "webscan", "--url", url, "-p", poc_path, "--html-output", f"{filename}.html"]
         if output_file_type == "json":

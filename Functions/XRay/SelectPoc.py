@@ -3,6 +3,9 @@
 import os
 from PyQt5.QtWidgets import QFileDialog
 
+from Config import set_xray_poc_path
+
+
 # 添加选择POC的逻辑
 def select_xray_poc(window):
     options = QFileDialog.Options()
@@ -12,3 +15,4 @@ def select_xray_poc(window):
         for file_name in os.listdir(folder_path):
             if file_name.endswith(('.yaml', '.yml')):
                 window.ui.comboBox_4.addItem(file_name)
+                set_xray_poc_path(folder_path)

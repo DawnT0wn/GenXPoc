@@ -38,8 +38,8 @@ def generate_xray_poc(window):
             poc_yaml += f'        {key}: \'{value}\'\n'
     poc_yaml += f'      body: |\n'
     poc_yaml += f'        {body}\n'
-    poc_yaml += '      expression: |\n'
-    poc_yaml += f'        {window.ui.lineEdit_9.text()}\n\n'
+    poc_yaml += '    expression: |\n'
+    poc_yaml += f'      {window.ui.lineEdit_9.text()}\n\n'
     if window.ui.checkBox_13.isChecked():
         poc_yaml += '      output:\n'
         poc_yaml += '        search: |\n'
