@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Form(object):
     def setupUi(self, Form):
-        Form.setObjectName("Form")
+        Form.setObjectName("GenXPoc")
         Form.resize(1265, 770)
         self.tabWidget = QtWidgets.QTabWidget(Form)
         self.tabWidget.setGeometry(QtCore.QRect(10, 0, 1241, 751))
@@ -226,21 +226,15 @@ class Ui_Form(object):
         self.comboBox_5.addItem("")
         self.comboBox_5.addItem("")
         self.tabWidget.addTab(self.tab_2, "")
-        self.tab_3 = QtWidgets.QWidget()
-        self.tab_3.setObjectName("tab_3")
-        self.textEdit_9 = QtWidgets.QTextEdit(self.tab_3)
-        self.textEdit_9.setGeometry(QtCore.QRect(220, 140, 104, 79))
-        self.textEdit_9.setObjectName("textEdit_9")
-        self.tabWidget.addTab(self.tab_3, "")
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Form)
         Form.setTabOrder(self.textEdit, self.textEdit_2)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "GenXPoc"))
         self.checkBox_7.setText(_translate("Form", "Regex"))
         self.label.setText(_translate("Form", "选择Matcher"))
         self.checkBox_8.setText(_translate("Form", "extractors"))
@@ -336,9 +330,3 @@ class Ui_Form(object):
         self.comboBox_5.setItemText(0, _translate("Form", "html"))
         self.comboBox_5.setItemText(1, _translate("Form", "json"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "X-ray"))
-        self.textEdit_9.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">扩展POC界面</p></body></html>"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "尚待开发"))

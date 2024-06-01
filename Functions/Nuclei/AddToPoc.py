@@ -11,6 +11,6 @@ def nuclei_add_to_poc(window):
     http_request = window.ui.textEdit.toPlainText().replace('\n', '\n        ')
     http_request = re.sub(r'Host:\s*(\S+)', r'Host: {{Hostname}}', http_request, flags=re.IGNORECASE)
 
-    modified_poc= generated_poc[:index] + "  - |\n        " + http_request + "\n\n    " + generated_poc[index:]
+    modified_poc = generated_poc[:index] + "  - |\n        " + http_request + "\n\n    " + generated_poc[index:]
 
     window.ui.textEdit_2.setPlainText(modified_poc)

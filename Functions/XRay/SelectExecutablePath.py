@@ -1,8 +1,10 @@
 # XRay选择可执行文件
 from PyQt5.QtWidgets import QFileDialog
-
+from Config import *
 
 def select_executable_xray_path(window):
+    binary_xray_path = get_binary_xray()
+    window.ui.lineEdit_8.setText(binary_xray_path)
     options = QFileDialog.Options()
     file_path, _ = QFileDialog.getOpenFileName(window, "选择可执行文件路径", "",
                                                "All Files (*);;Executable Files (*.exe)", options=options)
@@ -13,3 +15,4 @@ def select_executable_xray_path(window):
     # 因此，当用户在文件对话框中打开文件时，他们将只能选择 .exe 格式的文件，或者是任何其他类型的文件。
     if file_path:
         window.ui.lineEdit_8.setText(file_path)  # 将选定的路径显示在文本框中
+        set_binary_xray(file_path)

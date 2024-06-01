@@ -17,7 +17,7 @@ def execute_xray(window):
         QMessageBox.information(window, "Invaild URL", "Please input only one valid URL")
         return None
 
-    poc_path = get_xrry_poc_path() + "/" + selected_poc
+    poc_path = get_xray_poc_path() + "/" + selected_poc
 
     execute_path = window.ui.lineEdit_8.text()
 
